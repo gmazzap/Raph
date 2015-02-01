@@ -25,7 +25,7 @@
         "psr-4": {
             "Raph\\": "src/"
         }
-    }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
