@@ -31,7 +31,6 @@ You also have possibility to immedialy restore shortcodes.
 
 - PHP 5.4+
 - WordPress 4.0+
-- Composer (only to install, not required on the server)
 
 ----
 
@@ -40,6 +39,11 @@ You also have possibility to immedialy restore shortcodes.
 The plugin is a Composer package and can be installed in plugin directory via:
 
     composer create-project gmazzap/raph
+    
+Alternatively, you can
+
+ - download [last release](https://github.com/Giuseppe-Mazzapica/Raph/releases) zip file
+ - cloning this repo using git
 
 ----
 

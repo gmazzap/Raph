@@ -38,10 +38,18 @@ if (! is_admin()) {
     return;
 }
 
-require_once __DIR__.'/vendor/autoload.php';
+$autoload = __DIR__.'/vendor/autoload.php';
+if (file_exists($autoload)) {
+    require_once $autoload;
+}
 
 if (defined('DOING_AJAX') && DOING_AJAX) {
+    class_exists('Raph\Renderer') or require_once __DIR__.'/src/Renderer.php';
+    class_exists('Raph\FormData') or require_once __DIR__.'/src/FormData.php';
     add_action('wp_ajax_raph-render', [new Renderer(new FormData()), 'render']);
 } elseif (in_array($GLOBALS['pagenow'], ['post.php', 'post-new.php'], true)) {
+    class_exists('Raph\AdminForm') or require_once __DIR__.'/src/AdminForm.php';
+    class_exists('Raph\FormData') or require_once __DIR__.'/src/FormData.php';
+    class_exists('Raph\PostProvider') or require_once __DIR__.'/src/PostProvider.php';
     add_action('admin_init', [new AdminForm(new FormData((new PostProvider())->init())), 'setup']);
 }
