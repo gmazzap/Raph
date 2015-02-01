@@ -43,6 +43,10 @@ if (file_exists($autoload)) {
     require_once $autoload;
 }
 
+add_action('plugins_loaded', function () {
+    load_plugin_textdomain('raph', false, dirname(plugin_basename(__FILE__)).'/lang');
+});
+
 if (defined('DOING_AJAX') && DOING_AJAX) {
     class_exists('Raph\Renderer') or require_once __DIR__.'/src/Renderer.php';
     class_exists('Raph\FormData') or require_once __DIR__.'/src/FormData.php';

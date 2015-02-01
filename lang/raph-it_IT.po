@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Raph v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-02-01 06:59:12+0000\n"
+"Last-Translator: admin <giuseppe.mazzapica@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: src/FormData.php:53
+#@ raph
+msgid "Render Shortcodes"
+msgstr "Renderizza Shortcode"
+
+#: src/FormData.php:54
+#@ raph
+msgid "No shortcodes to render."
+msgstr "Nessuno shortcode da renderizzare."
+
+#: src/FormData.php:55
+#@ raph
+msgid "Restore."
+msgstr "Ripristina."
+
+#: src/FormData.php:57
+#@ raph
+msgid "Shortcodes rendered. Save post to make changes effective."
+msgstr "Shortcode renderizzati. Salva il post per rendere effettive le modifiche."
+
+#: src/FormData.php:61
+#@ raph
+msgid "Sorry, an error occurred while rendering shortcodes."
+msgstr "Spiacenti, si è verificato un errore."
+
+#: src/FormData.php:64
+#@ raph
+msgid "Content has changed since last rendering."
+msgstr "Il contenuto è cambiato dall'ultimo rendering."
+
+#: src/FormData.php:65
+#@ raph
+msgid "By restoring you will lost those changes."
+msgstr "Se ripristini, il contenuto modificato dopo il rendering sarà perso."
+
