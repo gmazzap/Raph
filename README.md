@@ -6,18 +6,18 @@
 
 ## Sorry?
 
-Shortcodes may be useful, but rendering them "on the fly" can be a performarce killer.
+Shortcodes may be useful, but rendering them "on the fly" can be a performance killer.
 
 Moreover, shortcodes added by themes or by plugins, lock you in with those products, because you if you change
-theme or unistall plugins that add shortcodes than your content is bungled when not lost. 
+theme or uninstall plugins that add shortcodes, your content will be bungled when not lost.
 
 ## How it Works
 
 Raph adds a button in in post editor toolbar. When you click that button,
-all the shortcodes in the post are converted to same HTML they would output in frontend.
+all the shortcodes in the post are converted to the same HTML they would output in frontend.
 
 HTML is generated via AJAX and is not saved until you save post.
-You also have possibility to immedialy restore shortcodes.
+You also have possibility to immediately restore shortcodes.
 
 ----
 
@@ -43,7 +43,7 @@ The plugin is a Composer package and can be installed in plugin directory via:
 Alternatively, you can
 
  - download [last release](https://github.com/Giuseppe-Mazzapica/Raph/releases) zip file
- - cloning this repo using git
+ - clone this repo using git
 
 ----
 
