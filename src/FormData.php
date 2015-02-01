@@ -21,11 +21,6 @@ class FormData
     private static $nonce = 'raph_render';
 
     /**
-     * @var string
-     */
-    private static $salt = '}9kmWar@nJ6#Xm[8/E^(p[edKeU(u@o;,)b-RkRFE=[[3idNi]d-EEd4bzb=++g^';
-
-    /**
      * @var \Raph\PostProvider
      */
     private $postProvider;
@@ -95,7 +90,7 @@ class FormData
 
     private function nonceAction($id)
     {
-        return self::$nonce.md5($id.self::$salt.get_current_blog_id());
+        return self::$nonce.md5($id.LOGGED_IN_SALT.get_current_blog_id());
     }
 
     private function userCan($id, $type)
