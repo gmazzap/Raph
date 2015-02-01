@@ -32,7 +32,12 @@ class AdminForm
     public function setup()
     {
         add_action('admin_head', function () {
-            echo '<style>i.mce-i-raph { font: 400 20px/1 dashicons; }</style>';
+            echo "
+              <style>
+              i.mce-i-raph { font: 400 20px/1 dashicons; background-color: #777; }
+              i.mce-i-raph:before { color: #fff!important; }
+              </style>
+            ";
         });
         add_action('admin_enqueue_scripts', function () {
             wp_localize_script('editor', 'Raph', $this->formData->data());
