@@ -41,7 +41,7 @@ After having rendered shortcodes there is the possibility to immediately restore
    At the moment that isn't possible. *Maybe* it will be in future versions.
   
  - ***I selected a shortcode and clicked render button, but nothing happen, is it broken?***
- - 
+  
    No. When you select some text, you have to keep the selection as is until rendering is complete. Otherwise Raph don't know where to put rendered HTML, and to avoid to mess up your post content it does nohing.
 
 
