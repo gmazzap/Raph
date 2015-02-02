@@ -45,24 +45,25 @@ class FormData
         if ($post instanceof WP_Post) {
             return [
                 'i18n' => [
-                    'button_title'  => __('Render Shortcodes', 'raph'),
-                    'no_shortcodes' => __('No shortcodes to render.', 'raph'),
-                    'restore'       => __('Restore.', 'raph'),
-                    'notice'        => __(
+                    'buttonTitle'  => __('Render Shortcodes', 'raph'),
+                    'noShortcodes' => __('No shortcodes to render.', 'raph'),
+                    'restore'      => __('Restore.', 'raph'),
+                    'notice'       => __(
                         'Shortcodes rendered. Save post to make changes effective.',
                         'raph'
                     ),
-                    'ajax_error'    => __(
+                    'ajaxError'    => __(
                         'Sorry, an error occurred while rendering shortcodes.',
                         'raph'
                     ),
-                    'conf1'         => __('Content has changed since last rendering.', 'raph'),
-                    'conf2'         => __('By restoring you will lost those changes.', 'raph'),
+                    'conf1'        => __('Content has changed since last rendering.', 'raph'),
+                    'conf2'        => __('By restoring you will lost those changes.', 'raph'),
+                    'confAll'      => __('Do you want to render ALL shortcodes?', 'raph'),
                 ],
                 'data' => [
-                    'pid'        => absint($post->ID),
-                    'type'       => filter_var($post->post_type, FILTER_SANITIZE_STRING),
-                    'raph_check' => wp_create_nonce($this->nonceAction($post->ID)),
+                    'pid'       => absint($post->ID),
+                    'type'      => filter_var($post->post_type, FILTER_SANITIZE_STRING),
+                    'raphCheck' => wp_create_nonce($this->nonceAction($post->ID)),
                 ]
             ];
         }
@@ -76,14 +77,14 @@ class FormData
     public function check()
     {
         $data = filter_input_array(INPUT_POST, [
-            'pid'        => FILTER_SANITIZE_NUMBER_INT,
-            'type'       => FILTER_SANITIZE_STRING,
-            'raph_check' => FILTER_SANITIZE_STRING,
-            'content'    => FILTER_REQUIRE_SCALAR
+            'pid'       => FILTER_SANITIZE_NUMBER_INT,
+            'type'      => FILTER_SANITIZE_STRING,
+            'raphCheck' => FILTER_SANITIZE_STRING,
+            'content'   => FILTER_REQUIRE_SCALAR
         ]);
 
         return
-            wp_verify_nonce($data['raph_check'], $this->nonceAction($data['pid']))
+            wp_verify_nonce($data['raphCheck'], $this->nonceAction($data['pid']))
             && $this->userCan($data['pid'], $data['type'])
             && ! empty($data['content']);
     }

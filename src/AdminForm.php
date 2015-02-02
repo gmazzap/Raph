@@ -43,10 +43,10 @@ class AdminForm
             wp_localize_script('editor', 'Raph', $this->formData->data());
         });
         add_filter('mce_buttons', function (array $buttons) {
-            return array_merge($buttons, ['raph_render']);
+            return array_merge($buttons, ['raphRender']);
         });
         add_filter('mce_external_plugins', function (array $plugins) {
-            return array_merge($plugins, ['raph_render' => $this->scriptUrl()]);
+            return array_merge($plugins, ['raphRender' => $this->scriptUrl()]);
         });
     }
 
