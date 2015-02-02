@@ -13,8 +13,10 @@ theme or uninstall plugins that add shortcodes, your content will be bungled whe
 
 ## How it Works
 
-Raph adds a button in in post editor toolbar. When you click that button,
-all the shortcodes in the post are converted to the same HTML they would output in frontend.
+Raph adds a button in in post editor toolbar. When you click that button
+
+- if nothing is selected all the shortcodes in the post are converted to the same HTML they would output in frontend
+- if something is selected, than only shortcodes in selection are converted
 
 HTML is generated via AJAX and is not saved until you save post.
 You also have possibility to immediately restore shortcodes.
