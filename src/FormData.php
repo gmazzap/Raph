@@ -72,7 +72,7 @@ class FormData
     /**
      * Verify that $_POST data for a post and that current user has the capability to edit the post.
      *
-     * @return bool
+     * @return bool|array
      */
     public function check()
     {
@@ -86,7 +86,9 @@ class FormData
         return
             wp_verify_nonce($data['raphCheck'], $this->nonceAction($data['pid']))
             && $this->userCan($data['pid'], $data['type'])
-            && ! empty($data['content']);
+            && ! empty($data['content'])
+                ? $data
+                : false;
     }
 
     private function nonceAction($id)
